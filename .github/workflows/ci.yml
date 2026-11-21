@@ -25,6 +25,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: ruby/setup-ruby@v1
         with:
+          ruby-version: "4.0" # latest 4.0.x the runner has; .ruby-version pins the exact local one
           working-directory: api
           bundler-cache: true
       - name: Create the test database (with the double-booking constraint)
