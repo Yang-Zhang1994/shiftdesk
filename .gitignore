@@ -1,0 +1,16 @@
+# Rails
+/api/config/master.key
+/api/config/credentials/*.key
+/api/log/*
+/api/tmp/*
+/api/storage/*
+!/api/log/.keep
+!/api/tmp/.keep
+/api/.bundle
+
+# Front end
+node_modules/
+/web/dist/
+
+.DS_Store
+.env*
