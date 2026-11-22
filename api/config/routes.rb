@@ -13,5 +13,9 @@ Rails.application.routes.draw do
     end
     post "swap_requests/:id/approve", to: "swap_requests#approve"
     post "swap_requests/:id/reject", to: "swap_requests#reject"
+
+    # Employee app
+    get "employees/:employee_id/week", to: "employees#week"
+    post "employees/:employee_id/claims/:shift_id", to: "employees#claim"
   end
 end

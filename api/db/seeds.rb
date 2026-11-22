@@ -34,6 +34,12 @@ add(diner, zone, sunday, staff["Gus Novak"], "shift_lead", 6, 8, 18)
 # Open shifts nobody has taken yet.
 add(diner, zone, sunday, nil, "cook", 6, 7, 15)
 add(diner, zone, sunday, nil, "cashier", 1, 16, 22)
+# Next week, for the employee app: Ana's first shifts and open shifts she can pick up.
+(8..10).each { |d| add(diner, zone, sunday, staff["Ana Lee"], "cook", d, 7, 15) }
+add(diner, zone, sunday, nil, "cook", 8, 16, 22)
+add(diner, zone, sunday, nil, "cook", 12, 9, 17)
+add(diner, zone, sunday, nil, "cook", 13, 7, 15)
+add(diner, zone, sunday, nil, "cashier", 9, 8, 16)
 
 # Dev asked Emma to cover his Wednesday.
 wednesday = Shift.find_by!(employee: staff["Dev Patel"], starts_at: zone.local(sunday.year, sunday.month, sunday.day, 8) + 3.days)
